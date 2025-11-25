@@ -64,10 +64,15 @@ export default {
       },
       backgroundImage: {
         'hero-gradient': 'linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)))',
+        'gradient-primary': 'linear-gradient(135deg, hsl(var(--gradient-primary)))',
+        'gradient-accent': 'linear-gradient(135deg, hsl(var(--gradient-accent)))',
+        'gradient-premium': 'linear-gradient(135deg, hsl(var(--gradient-premium)))',
       },
       boxShadow: {
         'card': 'var(--card-shadow)',
         'card-hover': 'var(--card-shadow-hover)',
+        'glow': 'var(--card-shadow-glow)',
+        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -95,6 +100,9 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
+        "shimmer": "shimmer 2s linear infinite",
       },
     },
   },

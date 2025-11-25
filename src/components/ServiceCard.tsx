@@ -12,24 +12,27 @@ const ServiceCard = ({ image, title, description }: ServiceCardProps) => {
   const navigate = useNavigate();
 
   return (
-    <Card className="group hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-2 overflow-hidden animate-fade-in">
-      <div className="overflow-hidden">
+    <Card className="group relative hover:shadow-glow transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 overflow-hidden animate-fade-in glass-card border-2">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="overflow-hidden relative">
         <img
           src={image}
           alt={title}
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-52 object-cover transition-all duration-700 group-hover:scale-125 group-hover:rotate-2"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
-      <CardHeader>
-        <CardTitle className="text-xl">{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+      <CardHeader className="relative z-10">
+        <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{title}</CardTitle>
+        <CardDescription className="group-hover:text-foreground/80 transition-colors duration-300">{description}</CardDescription>
       </CardHeader>
-      <CardFooter>
+      <CardFooter className="relative z-10">
         <Button
           onClick={() => navigate("/booking")}
-          className="w-full transition-all duration-300"
+          className="w-full transition-all duration-300 group-hover:shadow-lg relative overflow-hidden"
         >
-          Book Now
+          <span className="relative z-10">Start Learning</span>
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </Button>
       </CardFooter>
     </Card>
