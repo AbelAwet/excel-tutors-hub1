@@ -57,6 +57,17 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        'hero-gradient': {
+          start: 'hsl(var(--hero-gradient-start))',
+          end: 'hsl(var(--hero-gradient-end))',
+        },
+      },
+      backgroundImage: {
+        'hero-gradient': 'linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)))',
+      },
+      boxShadow: {
+        'card': 'var(--card-shadow)',
+        'card-hover': 'var(--card-shadow-hover)',
       },
       borderRadius: {
         lg: "var(--radius)",
